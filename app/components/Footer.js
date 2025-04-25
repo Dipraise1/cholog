@@ -46,10 +46,33 @@ const FooterColumn = styled.div`
 `;
 
 const FooterLogo = styled.div`
-  position: relative;
-  width: 140px;
-  height: 48px;
   margin-bottom: 1.5rem;
+`;
+
+const LogoText = styled.div`
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, var(--primary), #ff9900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(255, 102, 0, 0.3);
+  position: relative;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), transparent);
+    border-radius: 2px;
+    opacity: 0.5;
+  }
 `;
 
 const FooterAbout = styled.p`
@@ -202,12 +225,7 @@ const Footer = () => {
       <FooterContent>
         <FooterColumn>
           <FooterLogo>
-            <Image 
-              src="/BetJuicy_files/Logo.svg" 
-              alt="Chologg" 
-              fill
-              style={{ objectFit: 'contain' }}
-            />
+            <LogoText>Chologg</LogoText>
           </FooterLogo>
           <FooterAbout>
             Chologg is your gateway to the best gambling and gaming platforms. 
