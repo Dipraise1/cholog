@@ -208,14 +208,14 @@ const GameIconContainer = styled.div`
 `;
 
 const HeroTitle = styled.h1`
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
-  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   color: white;
   text-transform: uppercase;
-  font-family: 'Teko', sans-serif;
-  letter-spacing: 1px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5);
   position: relative;
   
@@ -223,7 +223,7 @@ const HeroTitle = styled.h1`
     color: var(--primary);
     position: relative;
     display: inline-block;
-    text-shadow: 0 2px 15px rgba(255, 102, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 15px rgba(255, 102, 0, 0.6), 0 0 10px rgba(0, 0, 0, 0.8);
     
     &:after {
       content: '';
@@ -233,10 +233,10 @@ const HeroTitle = styled.h1`
       width: 100%;
       height: 8px;
       background: linear-gradient(90deg, var(--primary), rgba(255, 102, 0, 0.3));
-      opacity: 0.5;
+      opacity: 0.7;
       z-index: -1;
       border-radius: 4px;
-      filter: blur(2px);
+      filter: blur(3px);
     }
   }
   
@@ -248,7 +248,7 @@ const HeroTitle = styled.h1`
     width: 60px;
     height: 60px;
     background: var(--primary);
-    opacity: 0.1;
+    opacity: 0.2;
     border-radius: 10px;
     transform: rotate(45deg);
     filter: blur(15px);
@@ -257,15 +257,16 @@ const HeroTitle = styled.h1`
 
 const HeroSubtitle = styled.h2`
   font-size: 1.2rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 2rem;
   max-width: 550px;
   line-height: 1.6;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
   position: relative;
   padding: 0.5rem 0;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  font-family: 'Rubik', sans-serif;
   
   &:after {
     content: '';
@@ -274,7 +275,7 @@ const HeroSubtitle = styled.h2`
     left: 35%;
     width: 30%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(255, 102, 0, 0.5), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 102, 0, 0.7), transparent);
     border-radius: 50%;
   }
   
@@ -293,20 +294,23 @@ const HeroButtons = styled.div`
 `;
 
 const PrimaryButton = styled.button`
-  background: linear-gradient(45deg, var(--primary), var(--accent));
+  background: linear-gradient(45deg, var(--primary), #ff5722);
   color: white;
   border: none;
   padding: 0.9rem 2rem;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
   text-transform: uppercase;
-  box-shadow: 0 8px 20px rgba(255, 102, 0, 0.4);
+  box-shadow: 0 8px 20px rgba(255, 102, 0, 0.4), 0 0 15px rgba(255, 102, 0, 0.2);
   position: relative;
   overflow: hidden;
   text-decoration: none;
   display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   
   &:before {
     content: '';
@@ -318,7 +322,7 @@ const PrimaryButton = styled.button`
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.3),
       transparent
     );
     transition: 0.5s;
@@ -326,6 +330,11 @@ const PrimaryButton = styled.button`
   
   &:hover:before {
     left: 100%;
+  }
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(255, 102, 0, 0.6), 0 0 20px rgba(255, 102, 0, 0.3);
   }
 `;
 
@@ -423,7 +432,7 @@ const SectionTitle = styled(motion.h2)`
   color: white;
   text-align: center;
   margin-bottom: 3rem;
-  font-family: 'Teko', sans-serif;
+  font-family: 'Oswald', sans-serif;
   position: relative;
   z-index: 1;
   
@@ -529,7 +538,7 @@ const GameTitle = styled.h3`
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  font-family: 'Teko', sans-serif;
+  font-family: 'Oswald', sans-serif;
   color: white;
 `;
 
@@ -618,7 +627,7 @@ const PartnerName = styled.h3`
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: white;
-  font-family: 'Teko', sans-serif;
+  font-family: 'Oswald', sans-serif;
 `;
 
 const PartnerBonus = styled.p`
@@ -684,7 +693,7 @@ const LeaderboardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
-  font-family: 'Teko', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 1.2rem;
 `;
 
@@ -796,7 +805,7 @@ const CTATitle = styled.h2`
   font-weight: 700;
   color: white;
   margin-bottom: 1.5rem;
-  font-family: 'Teko', sans-serif;
+  font-family: 'Oswald', sans-serif;
   
   span {
     color: var(--primary);
